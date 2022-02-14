@@ -1,0 +1,59 @@
+body{
+    background-image: url(../img/fondo2.1.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+li a{
+    text-transform: uppercase;
+}
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+.carrusel{
+    width: 60%;
+    margin: 20px auto;
+    
+}
+.card{
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(#77BFA3, #FABB51);
+
+}
+.card img{
+    display: flex;
+    object-fit: cover;
+
+}
+.carruImg{
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center center;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    padding: 5px;
+    font-size: 20px;
+    text-decoration-line: underline;
+}
+.list h3{
+    text-shadow: black 2px 2px;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 10px;
+}
+.derechos{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.navbar{
+    background-color: #77BFA3;
+}
