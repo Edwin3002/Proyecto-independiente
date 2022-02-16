@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    background-image: url(../img/fondo2.1.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+li a{
+    text-transform: uppercase;
+}
+.carrusel{
+    width: 70%;
+    margin: 20px auto;
+    
+}
+.frase{
+    background-image: url(../img/frase.jpg);
+    background-size: 100%;
+    width: 55%;
+    margin: 100px auto;
+}
+.frase p{
+    font-family: 'Lobster';
+}
+.carruImg{
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center center;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    padding: 5px;
+    font-size: 20px;
+    text-decoration-line: underline;
+}
+.list h3{
+    text-shadow: black 2px 2px;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 10px;
+}
+.derechos{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.navbar{
+    background-color: #77BFA3;
+}
