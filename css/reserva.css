@@ -6,6 +6,14 @@ body{
 li a{
     text-transform: uppercase;
 }
+
+.categorias {
+    background-color: #77BFA3;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 15px;
+}
+
 .cartas {
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +23,7 @@ li a{
     padding: 10px;
     margin: 10px;
     background-image: linear-gradient(#77BFA3, #FABB51);
+    border-radius: 15px;
 
 }
 .card img{
@@ -51,6 +60,15 @@ li a{
 .formR{
     margin: auto;
 }
+.form_title {
+    background-color: #77BFA3;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding:  10px;
+    border-radius: 15px;
+}
+
 #btnEnviar{
     margin-top: 10px;
 }

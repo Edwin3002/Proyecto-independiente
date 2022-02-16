@@ -30,10 +30,10 @@
                         <a class="nav-link " id="activeCartas1" aria-current="page" href="./inicio.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="activeCartas2" href="#">Nosotros</a>
+                        <a class="nav-link" id="activeCartas2" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" id="activeCartas2" href="#">Reservas</a>
+                        <a class="nav-link active" id="activeCartas2" href="reserva.html">Reservas</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" id="form">
@@ -46,146 +46,42 @@
 
     <!-- nav categorias -->
     <br><br><br>
-    <ul class="nav justify-content-center ">
+    <ul class="nav justify-content-center categorias">
         <li class="nav-item ">
-            <a class="nav-link active text-dark fw-bold fs-3" aria-current="page" href="#">Active</a>
+            <a class="nav-link active text-light fw-bold fs-3" onclick="pintarCartas__all()" aria-current="page" href="#">Todas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active text-dark fw-bold fs-3" href="#">Link</a>
+            <a class="nav-link active text-light fw-bold fs-3" href="#" onclick="pintarCartas__categoria('carnes')">Carnes</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active text-dark fw-bold fs-3" href="#">Link</a>
+            <a class="nav-link active text-light fw-bold fs-3" href="#" onclick="pintarCartas__categoria('bebidas')">Bebidas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active text-dark fw-bold fs-3">Disabled</a>
+            <a class="nav-link active text-light fw-bold fs-3" href="#" onclick="pintarCartas__categoria('postres')">Postres</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active text-light fw-bold fs-3" href="#" onclick="pintarCartas__categoria('comidas_rapidas')">Comidas Rapidas</a>
         </li>
     </ul>
 
-    <!-- cartas -->
-    <!-- <div class="cartas" id="cartas">
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="text-light" class="card-title">Carnes</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/2.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-primary">
-                    <h5 class="text-light" class="card-title">Entrada</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/3.jpg" class="" alt="...">
-                <div class="card-body">
-                    <h5 class="text-light" class="card-title">Bebidas</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="text-light" class="card-title">Bebidas</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="text-light" class="card-title">Bebidas</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" >
-                <img src="./img/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="text-light" class="card-title">Bebidas</h5>
-                    <button type="button" class="btn btn-dark btnCarta" onclick="verCarta(${id})" >Ver más</button>
-                </div>
-            </div>
-            </div> -->
+    
 
     <!-- cartas horizon -->
-    <div class="cartas" id="cartas">
+    <div class="cartas" id="cartas"></div>
 
-
-        <!-- <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./img/1.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-white text-uppercase">CARTA TITULO</h5>
-                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in
-                            tocontent.</p>
-                        <p class="card-text fw-bold">30.000$</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./img/4.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-white text-uppercase">CARTA TITULO</h5>
-                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in
-                            tocontent.</p>
-                        <p class="card-text fw-bold">30.000$</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./img/2.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-white text-uppercase">CARTA TITULO</h5>
-                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in
-                            tocontent.</p>
-                        <p class="card-text fw-bold">30.000$</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./img/3.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-white text-uppercase">CARTA TITULO</h5>
-                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in
-                            tocontent.</p>
-                        <p class="card-text fw-bold">30.000$</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-    </div>
     <!-- formulario de info -->
-    <form class="formR w-75" id="form">
+    <form class="formR w-75 background" id="form">
         <div class="form-info text-light" id="form-info">
-            <h2 class="text-black">RESERVAS</h2>
+            <h2 class="form_title">Diligencia tus datos para hacer tu pedido</h2>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
                 <input id="inputNombre" type="text" class="form-control border border-dark border-3" placeholder="First name"
-                    aria-label="First name" required>
+                    aria-label="Tu nombre es ?" required>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Number phone</label>
+                <label for="exampleFormControlInput1" class="form-label">Numero de telefono</label>
                 <input id="inputTelefono" type="number" class="form-control border border-dark border-3" placeholder="Last name"
-                    aria-label="Number phone" required>
+                    aria-label="Tu telefono es ?" required>
             </div>
             <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">Time</label>
@@ -223,3 +119,4 @@
 </body>
 
 </html>
+
