@@ -99,10 +99,16 @@ function confirmarP() {
     let telefono = document.getElementById("inputTelefono").value;
     let mesa = document.getElementById("inputMesa").value;
     let hora = document.getElementById("inputHora").value;
-
+    
+    if(x === 0){
+        alert('No hay nada en el carro')
+    }else if (nombre.length == 0 || telefono.length == 0 || hora.length == 0){
+        alert('faltan datos por llenar')
+    }else{
     let pedido = [nombre, telefono, mesa, hora];
     console.log(pedido)
     alert(`Se han confirmado ${x} pedidos para ${nombre} a las ${hora}`)
+    }
 }
 
 
