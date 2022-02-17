@@ -84,7 +84,11 @@ li a{
     
 th{
     background-color: #343a40;
-    
+    text-transform: uppercasegit ;
+}
+tfoot{
+    background-color: #343a40;
+    color: white;
 }
 tr:nth-child(even){
     padding: 5px;

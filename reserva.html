@@ -19,8 +19,8 @@
         <div class="container-fluid">
             <img src="./Dbd/logo.jpg" class="logo" alt="">
             <a class="navbar-brand" href="#">PARRILLA</a>
-            <a class="navbar-brand" href="#tabla">Ir a <i class="fas fa-shopping-cart"></i></a>
             <a class="navbar-brand" href="#menu">Ir a <i class="fas fa-book-open"></i></a>
+            <a class="navbar-brand" href="#tabla">Ir a <i class="fas fa-shopping-cart"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -80,6 +80,9 @@
                 <tr>
                 </tr>
             </tbody>
+            <tfoot id="listasNumeroP">
+
+            </tfoot>
         </table>
     </div>
 
@@ -89,22 +92,27 @@
         <div class="form-info text-light" id="form-info">
             <h2 class="form_title">Diligencia tus datos para hacer tu pedido</h2>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <label for="exampleFormControlInput1" class="form-label">Nombre <span style="color: red;">*</span></label>
                 <input id="inputNombre" type="text" class="form-control border border-dark border-3" placeholder="First name"
                     aria-label="Tu nombre es ?" required>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Numero de telefono</label>
-                <input id="inputTelefono" type="number" class="form-control border border-dark border-3" placeholder="Last name"
+                <label for="exampleFormControlInput1" class="form-label">Numero de telefono <span style="color: red;">*</span></label>
+                <input id="inputTelefono" type="number" min="1" maxlength="10" class="form-control border border-dark border-3" placeholder="Number phone"
                     aria-label="Tu telefono es ?" required>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Hora de llegada (Reloj de 24 horas)</label>
-                <input id="inputApellido" type="time" class="form-control border border-dark border-3" placeholder="Hora 24"
+                <label for="exampleFormControlInput1" class="form-label">Numero de mesa (Si estas en el restaurante)</label>
+                <input id="inputMesa" type="number" min="1" max="100" class="form-control border border-dark border-3" placeholder="Number table"
+                    aria-label="Tu telefono es ?">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Hora de llegada <span style="color: red;">*</span>(Reloj de 24 horas)</label>
+                <input id="inputHora" type="time" class="form-control border border-dark border-3" placeholder="Hora 24"
                     aria-label="Last name" required>
             </div>
             <div class="col-12">
-                <button id="btnEnviar" class="btn btn-dark" type="submit">Confirmar pedido</button>
+                <button id="btnEnviar" class="btn btn-dark" type="submit" onclick="confirmarP()">Confirmar pedido</button>
         </div>
     </form>
     <!-- contactanos -->
