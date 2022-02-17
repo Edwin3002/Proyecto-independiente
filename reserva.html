@@ -15,10 +15,12 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container-fluid">
             <img src="./Dbd/logo.jpg" class="logo" alt="">
-            <a class="navbar-brand" href="https://deadbydaylight.com/en" target="_blank">PARRILLA</a>
+            <a class="navbar-brand" href="#">PARRILLA</a>
+            <a class="navbar-brand" href="#tabla">Ir a <i class="fas fa-shopping-cart"></i></a>
+            <a class="navbar-brand" href="#menu">Ir a <i class="fas fa-book-open"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -36,17 +38,13 @@
                         <a class="nav-link active" id="activeCartas2" href="reserva.html">Reservas</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex" id="form">
-                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
             </div>
         </div>
     </nav>
 
     <!-- nav categorias -->
-    <br><br><br>
-    <ul class="nav justify-content-center categorias">
+    <br id="menu"><br><br>
+    <ul class="nav justify-content-center categorias" >
         <li class="nav-item ">
             <a class="nav-link active text-light fw-bold fs-3" onclick="pintarCartas__all()" aria-current="page" href="#">Todas</a>
         </li>
@@ -65,9 +63,26 @@
     </ul>
 
     
-
     <!-- cartas horizon -->
-    <div class="cartas" id="cartas"></div>
+    <div class="cartas" id="cartas">
+    </div>
+    
+    <!-- /tabla carrito -->
+      <div class="tabla" id="tabla">
+        <table class="tablaCarrito">
+            <thead>
+              <tr class="text-white">
+                <th scope="col">carrito</th>
+                <th scope="col">Pedido</th>
+              </tr>
+            </thead>
+            <tbody id="listarCarrito">
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 
     <!-- formulario de info -->
     <form class="formR w-75 background" id="form">
@@ -84,8 +99,8 @@
                     aria-label="Tu telefono es ?" required>
             </div>
             <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Time</label>
-                <input id="inputApellido" type="time" class="form-control border border-dark border-3" placeholder="Last name"
+                <label for="exampleFormControlInput1" class="form-label">Hora de llegada (Reloj de 24 horas)</label>
+                <input id="inputApellido" type="time" class="form-control border border-dark border-3" placeholder="Hora 24"
                     aria-label="Last name" required>
             </div>
             <div class="col-12">

@@ -7,17 +7,18 @@ const API_all = async () => {
 const API_categoria = async (categoria) => {
     const data = await fetch(`https://proyecto-independiente.herokuapp.com/menu?categoria=${categoria}`);
     const json = await data.json()
+    console.log(json)
     return json
 }
 
 document.addEventListener('DOMContentLoaded', pintarCartas__all())
 
-async function pintarCartas__all(){
+async function pintarCartas__all() {
     let space = document.getElementById('cartas')
     let data = await API_all()
     space.innerHTML = ''
     data.forEach(element => {
-        const {nombre, descripcion, img, precio, categoria} = element;
+        const { nombre, descripcion, img, precio, categoria } = element;
         space.innerHTML += `
         <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
@@ -28,7 +29,7 @@ async function pintarCartas__all(){
                 <div class="card-body">
                     <h5 class="card-title text-white text-uppercase">${nombre}</h5>
                     <p class="card-text ">${descripcion}</p>
-                    <p class="card-text fw-bold">${precio}$</p>
+                    <p class="card-text fw-bold">${precio}$ <button class="btn btn-info float-end" type="button" id="agregar" onclick="guardarCarrito('${img}', '${nombre}')">Agregar <i class="fas fa-shopping-cart"></i></button></p>
                 </div>
             </div>
         </div>
@@ -36,12 +37,12 @@ async function pintarCartas__all(){
     });
 }
 
-async function pintarCartas__categoria(categoria){
+async function pintarCartas__categoria(categoria) {
     let space = document.getElementById('cartas')
     let data = await API_categoria(categoria)
     space.innerHTML = ''
     data.forEach(element => {
-        const {nombre, descripcion, img, precio, categoria} = element;
+        const { nombre, descripcion, img, precio, categoria } = element;
         space.innerHTML += `
         <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
@@ -52,7 +53,7 @@ async function pintarCartas__categoria(categoria){
                 <div class="card-body">
                     <h5 class="card-title text-white text-uppercase">${nombre}</h5>
                     <p class="card-text ">${descripcion}</p>
-                    <p class="card-text fw-bold">${precio}$</p>
+                    <p class="card-text fw-bold">${precio}$ <button class="btn btn-info float-end" type="button" id="agregar" onclick="guardarCarrito('${img}', '${nombre}')">Agregar <i class="fas fa-shopping-cart"></i></button></p>
                 </div>
             </div>
         </div>
@@ -60,6 +61,15 @@ async function pintarCartas__categoria(categoria){
     });
 }
 
-
+function guardarCarrito(img, name) {
+    console.log(img, name)
+    let carrito = document.getElementById('listarCarrito');
+    carrito.innerHTML += `
+    <tr>
+                    <td><div class="divCarrito"><img src="${img}" alt=""></div></td>
+                    <td>${name}</td>
+                </tr>
+    `
+}
 
 
